@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <section class="top-nav">
+  </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+  <div class='menu-button'></div>
+</label>
+<ul class="menu">
+    <li class="nav-item"><a href="index.html">О нас</a></li>
+    <li class="nav-item"><a href="index2.html">Подготовка к ЕГЭ</a></li>
+    <li class="nav-item"><a href="index3.html">Подготовка к ОГЭ</a></li>
+    <li class="nav-item"><a href="index4.html">Курсы для средней школы</a></li>
+  </ul>
+</section>
+<div class="container">
+  <header>
+    <div class="bg-line"> 
+    <h1 class="head">My School World</h1> 
+    </div>
+  </header>
+  <div class="nav">
+    <a href="index.html" class="nav-item">О нас</a>
+    <a href="index2.html" class="nav-item">Подготовка к ЕГЭ</a>
+    <a href="index3.html" class="nav-item">Подготовка к ОГЭ</a>
+    <a href="index4.html" class="nav-item">Курсы для средней школы</a>
+  </div>
+
+    <div class="h2"> 
+      <h2>Подготовка к ОГЭ</h2> 
+      </div>
+      <div class="center-text">
+        Наш курс создан специально для того, чтобы помочь вам максимально эффективно подготовиться к экзаменационным испытаниям и достичь высоких результатов.
+        <p>У нас комплексная программа обучения по всем предметам, входящим в ОГЭ: математика, русский язык, литература, иностранные языки, история, обществознание и другие.
+        </p> 
+        <p>Понятное объяснение сложных тем от опытных преподавателей, которые знают особенности экзамена и требования, предъявляемые к ученикам.
+    </p> 
+    <p>Разбор структуры экзамена и типов заданий. Вы научитесь правильно понимать формулировки вопросов и грамотно оформлять ответы.<p>Программа включает детальный разбор всех экзаменационных материалов и заданий, с упором на практику: вы будете регулярно решать КИМы (контрольно-измерительные материалы) и отрабатывать навыки выполнения тестов.
+       </p> А так же для учащихся 9 классов предлагаем выездной лагерь для подготовки. 
+       <p>
+    </p> 
+</div>
+<div class="center-wrapper">
+<div class="carousel">
+    <h2>Фото с лагеря</h2>
+
+    <div class="slides-container" id="slidesContainer">
+      <div class="slide"><img src="img/7.webp" alt="" /></div>
+      <div class="slide"><img src="img/8.jpg" alt="" /></div>
+      <div class="slide"><img src="img/9.jpeg" alt="" /></div>
+    </div>
+    
+    <button class="prev" id="prevBtn">&#10094; </button>
+    <button class="next" id="nextBtn"> &#10095;</button>
+  </div>
+</div>
+<footer class="footer">
+    ©My School World - 2025
+</footer> 
+  <script>
+    const slidesContainer = document.getElementById('slidesContainer');
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    function showSlide(index) {
+      if (index < 0) {
+        index = totalSlides - 1;
+      } else if (index >= totalSlides) {
+        index = 0;
+      }
+      currentIndex = index;
+      slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    
+    // Обработчик кнопки "Prev"
+    prevBtn.addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+    });
+    
+    // Обработчик кнопки "Next"
+    nextBtn.addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+    });
+    </script>
+
+</body>
+</html>

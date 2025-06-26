@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <section class="top-nav">
+  </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+  <div class='menu-button'></div>
+</label>
+<ul class="menu">
+  <li class="nav-item"><a href="index.html">О нас</a></li>
+  <li class="nav-item"><a href="index2.html">Подготовка к ЕГЭ</a></li>
+  <li class="nav-item"><a href="index3.html">Подготовка к ОГЭ</a></li>
+  <li class="nav-item"><a href="index4.html">Курсы для средней школы</a></li>
+</ul>
+</section>
+<div class="container">
+  <header>
+    <div class="bg-line"> 
+    <h1 class="head">My School World</h1> 
+    </div>
+  </header>
+  <div class="nav">
+    <a href="index.html" class="nav-item">О нас</a>
+    <a href="index2.html" class="nav-item">Подготовка к ЕГЭ</a>
+    <a href="index3.html" class="nav-item">Подготовка к ОГЭ</a>
+    <a href="index4.html" class="nav-item">Курсы для средней школы</a>
+  </div>
+
+    <div class="h2"> 
+      <h2>О Нас</h2> 
+      </div>
+
+      <div class="line">
+        <div class="text1">
+          Мы – команда профессионалов, посвятившая себя созданию качественного онлайн-образования, которое помогает людям достигать новых высот в карьере и жизни. 
+           <p>Наша миссия – предоставить доступ к проверенным знаниям и навыкам, которые откроют перед вами новые возможности.</p>
+        <p>Мы всегда открыты для обратной связи от наших учеников и постоянно работаем над улучшением качества наших курсов</p>
+      </div>
+        <div class="img1"><img src="img/2.webp"></div> 
+</div>
+<div class="line">
+<div class="img2"><img src="img/3.jpg"></div> 
+<div class="text2">
+  Наши эксперты имеют многолетний опыт работы в своей сфере и готовы делиться своими знаниями и секретами успеха.
+   <p>Все наши курсы ориентированы на практику. Вы не только узнаете теорию, но и получите реальные навыки, которые сможете применять в работе.</p>
+   <p>Мы понимаем, что каждый ученик уникален. Наши кураторы всегда готовы помочь и поддержать вас на всем пути обучения.</p>
+  </div>
+</div>
+
+<div class="line">
+  <div class="text1">
+    <h3>Оставьте свои данные, и мы свяжемся с вами!</h3>
+  </div>
+  <div class="contact-button">
+    <button class="big-button open-popup-btn">Оставить заявку</button>
+  </div>
+</div>
+
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <button class="close-btn" id="closePopup">&times;</button>
+    <h2>Записаться на курс</h2>
+    <form>
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  ©My School World - 2025
+</footer>
+</div>
+
+<script>
+const openBtns = document.querySelectorAll('.open-popup-btn');
+const popup = document.getElementById('popup');
+const closeBtn = document.getElementById('closePopup');
+
+openBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    popup.style.display = 'flex';
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+</script>
+</body>
+</html>

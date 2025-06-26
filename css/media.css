@@ -1,0 +1,63 @@
+@media (max-width: 800px) 
+{
+    .top-nav{
+        display: flex !important;
+     
+    }
+     .nav{
+      display: none;
+     }
+     .bg-line{
+      margin-top: 40px; 
+     }
+     .line{
+        flex-direction: column-reverse; 
+        border: 3px white solid;
+        border-radius: 10px;
+     }
+     .line~.line{
+        flex-direction: column; 
+     }
+     .footer{
+        flex-direction: column;
+     }
+     .icons{
+        width: 100%;
+        margin-bottom: 10px;
+     }
+     .text1,.text2{
+      text-align: center;
+        margin-top: 10px;
+     }
+     .head{
+        letter-spacing: 1rem;
+     }
+     .contact-button{
+      flex-direction: column ; 
+      margin-bottom: 15px;
+      margin-right: 20%;
+      margin-left: 20%;
+      width: 60%;
+      height: auto;
+    }
+    .cards-container{
+      flex-direction: column; 
+      margin-bottom: 10px;
+      width: 100%;
+      height: auto;
+    }
+    .card {
+      margin-left:20%;
+      width: 60%;
+    }
+    .carousel {
+      max-width: 70%;
+    }
+    .slide img {
+      object-fit:contain;
+    }
+    .card1 {
+      margin-left:20%;
+      width: 60%;
+    }
+    }
