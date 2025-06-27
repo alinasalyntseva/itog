@@ -58,9 +58,10 @@ header{
      letter-spacing: 2rem; 
      font-family: 'Paper Cuts';
      color:black;
+     margin-top: 2%;
      text-shadow: 2px 2px 1px rgb(248, 246, 246);
 }
-.h2{
+.h1{
     text-align: center;
     font-size: calc(0.2rem + 2vw);
     letter-spacing: 1rem; 
